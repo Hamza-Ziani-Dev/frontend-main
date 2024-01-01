@@ -1,0 +1,26 @@
+<div class="main-body">
+	<div class="row mt-4 justify-content-center align-content-center">
+		<div class="col-lg-10 justify-content-center align-content-center">
+            <form [formGroup]="addUserForm">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>UserName</mat-label>
+                    <input matInput  formControlName="username"  placeholder="username">
+                    <mat-error>required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Email</mat-label>
+                    <input matInput  formControlName="email"  placeholder="email">
+                    <mat-error>required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input matInput  formControlName="password"  placeholder="password">
+                    <mat-error>required</mat-error>
+                </mat-form-field>
+                <div class="d-flex justify-content-center">
+                    <button   mat-raised-button color="warn" (click)="AddUser()">Add User</button>
+                </div>
+            </form>
+		</div>
+	</div>
+</div>

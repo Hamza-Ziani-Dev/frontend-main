@@ -1,0 +1,42 @@
+<div class="container-fluid posts_container">
+    <div class="row posts_title mt-4">
+        Last Posts
+    </div>
+    <div class="row d-flex post justify-content-center align-content-center">
+        <div class="content col-8 mb-4">
+            <div *ngFor="let post of posts">
+              <div class="card">
+                <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <hr class="custom-line">
+                  <div class="box1 d-flex justify-content-between align-content-center">
+                    <div class="name-author">
+                      <span class="author">Author</span>: <span class="content-author">{{ post.user.username }}</span>
+                    </div>
+                    <div class="date-author">
+                      <span class="author">Date</span>: <span class="content-date">{{ post.createdAt }}</span>
+                    </div>
+                    <div class="cat">
+                      <span class="btn-cat">{{ post.category }}</span>
+                    </div>
+                  </div>
+                  <hr class="custom-line">
+                  <h2 class="card-title">{{ post.title }}</h2>
+                  <p class="card-text">{{ post.description }}</p>
+                  <div class="d-grid gap-2">
+                    <div class="btn btn-success" [routerLink]="['detail-post', post.id]" role="button">More...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="sidebar col-2 mt-4">
+            <h3 class="sidebar-title" (click)='getAllCategories()'>All Categories</h3>
+            <div class="d-block">
+              <div *ngFor="let category of categories" class="box mt-2" [ngClass]="{'active': selectedCategory === category}" (click)="selectCategory(category)">
+                {{ category }}
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

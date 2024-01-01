@@ -1,0 +1,33 @@
+<div  class="card mt-4 mb-4">
+    <div class="card-body">
+        <h5>User Api </h5> </div>
+</div>
+<div>
+  <button [routerLink]="['add-user/']"  type="button" class="btn btn-danger" >New User</button>
+</div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Image</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Admin</th>
+        <th scope="col">Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{user.id.substr(0,6)}}</td>
+    <td><img [src]="user.profilePhoto.url" height="50" width="50" style="border-radius: 50%;" alt=""></td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.isAdmin}}</td>
+        <td>{{user.updatedAt.substr(0,10)}}</td>
+        <td>
+            <button [routerLink]="['detail-user/', user.id]"  type="button" class="btn btn-primary" >View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

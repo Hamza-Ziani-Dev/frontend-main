@@ -1,0 +1,36 @@
+.navbar {
+    background: linear-gradient(to right, #0b9530, #064414) !important;
+    font-family: 'Century Gothic' !important;
+}
+.nav-link, .navbar-brand{
+    color: white !important;
+    font-family: 'Century Gothic Bold' !important;
+    font-size: large;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #151c14;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: linear-gradient(to right, #033d13, #04df37) !important;
+}
